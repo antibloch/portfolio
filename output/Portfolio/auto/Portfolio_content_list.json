@@ -1,0 +1,614 @@
+[
+    {
+        "type": "text",
+        "text": "Junaid Iqbal Khan ",
+        "text_level": 1,
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "ML Engineer ",
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "About me ",
+        "text_level": 1,
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "I am interested in Computer Vision and NLP topics from research and development perspective.   \nI have experience in these fields in the past over 3.5 years both in industry and academia.   \nI also focussed on time series analysis and signal processing. ",
+        "page_idx": 1
+    },
+    {
+        "type": "image",
+        "img_path": "images/5ba22fd109ae8423e42ac2343537ba88d93521c9ecf1e34fd7a609a032f15b79.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "My development projects are available as open-source contributions at GitHub current research profile can be accessed at Google Scholar ",
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "and my ",
+        "page_idx": 1
+    },
+    {
+        "type": "image",
+        "img_path": "images/dd81b8e8e6b63430a72b30f8e6ecb7ce108ddfc74e277554cc4fb0c39f420528.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "Skills & expertise ",
+        "text_level": 1,
+        "page_idx": 2
+    },
+    {
+        "type": "image",
+        "img_path": "images/49ae832e0b0b792d6953bc6a7937b5119038cc8880b046a03a62cd3da4287dbf.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "Selected Projects (Reverse Temporal Order) ",
+        "text_level": 1,
+        "page_idx": 3
+    },
+    {
+        "type": "image",
+        "img_path": "images/a67bb315ebffd9e43de7cd6b091e258bb8c561d232911dd4e49804914a26821d.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "https://github.com/antibloch ",
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "3D Vision ",
+        "text_level": 1,
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "I worked on fun topics like object detection and tracking, 3D rendering, LiDAR point cloud segmentation and 3D CAD modelling of buildings. ",
+        "page_idx": 4
+    },
+    {
+        "type": "image",
+        "img_path": "images/1e6cc2def36d31748bc790164607de7ecd95d4ab3cd0fdec8b5f6346bc3d897f.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 4
+    },
+    {
+        "type": "image",
+        "img_path": "images/75e9a048b69dc28245d772032b463e40e18474fb248779c1ec0109ee4e289f72.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 4
+    },
+    {
+        "type": "image",
+        "img_path": "images/e69d07857da45991dbcffc9392214bc15d71f2013e753f2002338d49b521a8d9.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 4
+    },
+    {
+        "type": "image",
+        "img_path": "images/b5ec3feabf837119177d19d3e8acf6f5f269ba88d469b776596f6291ca79c714.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 4
+    },
+    {
+        "type": "image",
+        "img_path": "images/d4a775f310e811d92ecce1aed5630e47fae6dd7d8e9c6ec062683efd7cc72675.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "Efficient MRI Segmentation and Dataset Condensation ",
+        "text_level": 1,
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "I explored U-Net and its variants (like U-Net and X-Net), and Vision Transformer for Brain tumor segmentation and classification in MRI datasets. Furthermore, in order to reduce the size of MRI dataset to allow more efficient training, I also performed ‘Dataset Condensation’ that optimizes the original MRI dataset through neural networks. ",
+        "page_idx": 5
+    },
+    {
+        "type": "image",
+        "img_path": "images/03d05f5a5d456b2e7fafdebb1079db20dbf155ce55648fa66635b9bc0ffad174.jpg",
+        "img_caption": [
+            "U-Net Variant Segmenting 2D MRI Image [1,2] "
+        ],
+        "img_footnote": [],
+        "page_idx": 5
+    },
+    {
+        "type": "image",
+        "img_path": "images/a3767c31188f50dec1681d183fa5cecb55b3dba6f1825f0297e4c34f0f618120.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "Privacy Risks in Machine Learning [1,2,3,4,5,6] ",
+        "text_level": 1,
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "Private and Secure Machine learning ",
+        "text_level": 1,
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "I was involved in several topics related to how to not allow any adversary extract sensitive information from machine learning models, and how can one use ML models to extract information from hardware side-channels like cache traces. ",
+        "page_idx": 6
+    },
+    {
+        "type": "image",
+        "img_path": "images/0703000970eea401c61c5eca7cf019edfe8549b8c8774fa8bd6ff83ef18328e5.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "Membership InferenceAttack(lnfer information about training data from computer vision models) ",
+        "page_idx": 6
+    },
+    {
+        "type": "image",
+        "img_path": "images/f2fd11f339b85836e39418b5b4f7b1cd761acf8d87c8bd7ae53112ee01281ba8.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "Model Inversion Attack (Reconstruct training images from face recognition models) ",
+        "page_idx": 6
+    },
+    {
+        "type": "image",
+        "img_path": "images/c0a5794809a783bfec64312a706783f6abd551b5e8615f709334be077c56704c.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "Machine Unlearning (Forgetting classification classes) ",
+        "page_idx": 6
+    },
+    {
+        "type": "image",
+        "img_path": "images/d79d2b38b0ed9993418da082c257d914ffd15513b6beb683765fda6db139dd70.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 6
+    },
+    {
+        "type": "image",
+        "img_path": "images/e58b9dbf2332db0997e5029fcc9f0cdac8b529c574e8b7bcdb98f4a228e35a07.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "Text-Signals based Cyberbully Classification ",
+        "text_level": 1,
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "In this project, I intended to compete with LLMs like BERT and its variants,   \nbased text classifier, to be competed with simpler   \narchitecture with   \ninnovative “text-signals” as text embeddings. Turns out that this innovation   \nleads to better   \nclassification performance on cyberbully-texts, as   \ncompared to pre-trained LLM based models. ",
+        "page_idx": 7
+    },
+    {
+        "type": "image",
+        "img_path": "images/63788501c19cbd03ce57066ce77bd3ac63ad5735ef06c8f324a54102487bf506.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "Proposed modelshave10 to1000 times lesstotal parametercountthan benchmarkmodels ",
+        "page_idx": 7
+    },
+    {
+        "type": "table",
+        "img_path": "images/2c55ee07071cbd4bb9d15d38402c9c714095b54a3ca390357623e82fac202ba7.jpg",
+        "table_caption": [],
+        "table_footnote": [],
+        "table_body": "<html><body><table><tr><td>ID</td><td>Description</td><td>TP</td><td>PP</td><td>LR</td><td>Epochs</td></tr><tr><td>M1</td><td>BERT-MLP</td><td>5.26x105</td><td>1.09x108</td><td>0.001</td><td>50</td></tr><tr><td>M</td><td>DistillBERT-MLP</td><td>5.26x105</td><td>6.68x107</td><td>0.001</td><td>50</td></tr><tr><td>M3</td><td>SentenceBERT-GCN</td><td>1.35x104</td><td>2.25x107</td><td>0.001</td><td>50</td></tr><tr><td>M4</td><td>SentenceBERT-GAN</td><td>8.31x106</td><td>2.25x107</td><td>0.001</td><td>50</td></tr><tr><td>M5</td><td>GCN-Attention (1D)</td><td>1.38x105</td><td>0</td><td>0.001</td><td>50</td></tr><tr><td>M6</td><td>GCN-Residual (1D)</td><td>2.31x106</td><td>0</td><td>0.001</td><td>50</td></tr><tr><td>M7</td><td>PatchConvnet (2D)</td><td>1.38x106</td><td>0</td><td>0.001</td><td>50</td></tr></table></body></html>",
+        "page_idx": 7
+    },
+    {
+        "type": "image",
+        "img_path": "images/11976335c0dd895acca1bc4e1bd433b032b9b458dd48bd02fe6d032e0a300538.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 7
+    },
+    {
+        "type": "table",
+        "img_path": "images/91573ba8aaf4610a8091e6ca994453e72568ead5b45113a8fdcfb7d09780c5bb.jpg",
+        "table_caption": [
+            "Evaluation Models with trainable parameter(TP) and pretrained parameter (PP "
+        ],
+        "table_footnote": [],
+        "table_body": "<html><body><table><tr><td>Metric</td><td>M1</td><td>M2</td><td>M3</td><td>M4</td><td>M5</td><td>M6</td><td>M7</td></tr><tr><td colspan=\"6\">250samples per label (Nma=40)</td><td></td><td></td></tr><tr><td>AP</td><td>70.95</td><td>72.97</td><td>6.67</td><td></td><td>76.35</td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td>73.66</td><td></td><td>74.66</td><td>577</td></tr><tr><td>RF</td><td>70.55</td><td>73.34</td><td>66.89</td><td>74.15</td><td>75.2</td><td>73.51</td><td>58.23</td></tr><tr><td></td><td>71.18</td><td>70.64</td><td>64.28</td><td>73.24</td><td>75.3</td><td>73.83</td><td>56.74</td></tr><tr><td colspan=\"6\">500 samples perlabel(Nma=144)</td><td></td><td></td></tr><tr><td>A</td><td>73.46</td><td>73.46</td><td>68.8</td><td>76.24</td><td>83.80</td><td>83.08</td><td>68.16</td></tr><tr><td>P</td><td>72.74</td><td>76.22</td><td>71.5</td><td>75.39</td><td>84.17</td><td>83.52</td><td>66.31</td></tr><tr><td>R</td><td>73.76</td><td>72.06</td><td>69.91</td><td>75.57</td><td>84.29</td><td>83.58</td><td>66.15</td></tr><tr><td>F</td><td>72.92</td><td>72.10</td><td>69.97</td><td>75.42</td><td>84.87</td><td>83.43</td><td>64.41</td></tr><tr><td colspan=\"6\">1000 samples per label (Nma=252)</td><td></td><td></td></tr><tr><td>A P</td><td>71.97 75.04</td><td>73.41 73.30</td><td>64.21 65.16</td><td>75.82 76.00</td><td>85.41 85.14</td><td>84.22</td><td>82.01</td></tr><tr><td>R</td><td>72.16</td><td>72.47</td><td>65.74</td><td>75.91</td><td>85.15</td><td>85.11 84.24</td><td>86.22</td></tr><tr><td>F</td><td>71.05</td><td>72.28</td><td>64.91</td><td>75.78</td><td>84.46</td><td></td><td>81.71</td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td>84.25</td><td>82.01</td></tr><tr><td colspan=\"6\">1500 samples per label (Nma=252)</td><td></td><td></td></tr><tr><td>A</td><td>72.94</td><td>68.76</td><td>67.47</td><td>79.14</td><td>88.30</td><td>87.36</td><td>88.82</td></tr><tr><td>P</td><td>74.29</td><td>69.62</td><td>66.41</td><td>79.75</td><td>88.05</td><td>87.17</td><td>88.95</td></tr><tr><td>R</td><td>73.78</td><td>68.09</td><td>66.81</td><td>79.46</td><td>88.38 88.15</td><td>87.45</td><td>88.85</td></tr><tr><td>F</td><td>73.18</td><td>67.92</td><td>65.02</td><td>79.57</td><td></td><td>87.28</td><td>88.47</td></tr><tr><td colspan=\"6\">2000 samples per label (Nma=252)</td><td></td><td></td></tr><tr><td>A</td><td>72.63</td><td>73.49</td><td>70.19</td><td>77.82</td><td>87.42</td><td>86.37</td><td>87.96</td></tr><tr><td>P</td><td>72.84</td><td>74.5</td><td>71.69</td><td>77.71</td><td>87.46</td><td>86.18</td><td>88.08</td></tr><tr><td>R</td><td>73.05</td><td>74.42</td><td>70.39</td><td>77.75</td><td>87.39</td><td>86.38</td><td>87.79</td></tr><tr><td>F</td><td>72.60</td><td>74.56</td><td>69.55</td><td>77.64</td><td>87.52</td><td>86.18</td><td>87.73</td></tr></table></body></html>",
+        "page_idx": 7
+    },
+    {
+        "type": "table",
+        "img_path": "images/1cb766c07935834c0d0cd9e623c65a461f92e6da2ff48160b85a7edfe3a71989.jpg",
+        "table_caption": [
+            "Dataset-1 evaluation (scores) "
+        ],
+        "table_footnote": [],
+        "table_body": "<html><body><table><tr><td>Models</td><td>H</td><td>P</td><td>R</td><td>F</td><td>A</td></tr><tr><td colspan=\"6\">2000 Samples(Nmax=797)</td></tr><tr><td>M1</td><td>0.0675</td><td>0.8218</td><td>0.8472</td><td>0.8282</td><td>0.8078</td></tr><tr><td>M2</td><td>0.0534</td><td>0.853</td><td>0.8587</td><td>0.8533</td><td>0.8177</td></tr><tr><td>M3</td><td>0.0802</td><td>0.7988</td><td>0.8054</td><td>0.7981</td><td>0.7832</td></tr><tr><td>M4</td><td>0.0679</td><td>0.818</td><td>0.8806</td><td>0.8333</td><td>0.7851</td></tr><tr><td>M5</td><td>0.0953</td><td>0.8004</td><td>0.8004</td><td>0.8004</td><td>0.8005</td></tr><tr><td>M6</td><td>0.0891</td><td>0.8122</td><td>0.8322</td><td>0.8128</td><td>0.8208</td></tr><tr><td>M7</td><td>0.0879</td><td>0.8226</td><td>0.8226</td><td>0.8226</td><td>0.8226</td></tr><tr><td colspan=\"6\">4000 Samples (Nmax=834）</td></tr><tr><td>M1</td><td>0.0431</td><td>0.8781</td><td>0.9034</td><td>0.8841</td><td>0.8659</td></tr><tr><td>M2</td><td>0.0398</td><td>0.8950</td><td>0.9102</td><td>0.9003</td><td>0.8686</td></tr><tr><td>M3</td><td>0.0798</td><td>0.8071</td><td>0.8049</td><td>0.7989</td><td>0.7908</td></tr><tr><td>M4</td><td>0.0494</td><td>0.8668</td><td>0.9056</td><td>0.8764</td><td>0.8455</td></tr><tr><td>M5</td><td>0.0337</td><td>0.9262</td><td>0.9305</td><td>0.9244</td><td>0.8726</td></tr><tr><td>M6</td><td>0.0360</td><td>0.9341</td><td>0.9320</td><td>0.9262</td><td>0.8512</td></tr><tr><td>M7</td><td>0.0459</td><td>0.8940</td><td>0.9101</td><td>0.8976</td><td>0.8659</td></tr></table></body></html>",
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "Dataset-2 evaluation (percentages) ",
+        "text_level": 1,
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "A: Accuracy P:Precision R:Recall F: $F _ { 1 }$ score H: Hamming Loss ",
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "Having Signal-Like Text Embeddings is Competitive to LLMs for Text Classification [1,2] ",
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "Radar based Vital Signs Detection ",
+        "text_level": 1,
+        "page_idx": 8
+    },
+    {
+        "type": "text",
+        "text": "I worked on full-stack radar based vital signs (heart rate and breathing rate) detection project that uses Doppler radar, in conjugation with Fourier and Empirical Mode based processing to robustly estimate the vital signs and displays them to a user’s smartphone app. ",
+        "page_idx": 8
+    },
+    {
+        "type": "image",
+        "img_path": "images/13a9a00d2672a66ea7be50f9804edc25cc276c122b47474854e003985b878714.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 8
+    },
+    {
+        "type": "image",
+        "img_path": "images/55de532a9786ee5a1c2cbdaee75f0d1bfefdb80ea1a4718e1a6f8cfaf54ae550.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 8
+    },
+    {
+        "type": "text",
+        "text": "COVID-19 Contact Tracing [1,2,3,4,5] ",
+        "text_level": 1,
+        "page_idx": 9
+    },
+    {
+        "type": "text",
+        "text": "In this project, I worked both on client (smartphone, flutter) and development side (nodejs, PostgreSQL) to design an app based solution for contact tracing of COVID-19, using smartphone sensors like GPS, bluetooth (beacon protocol) and accelerometer data. I utilize both algorithm and AI tools to build a unified solution, and I published paper on it. ",
+        "page_idx": 9
+    },
+    {
+        "type": "image",
+        "img_path": "images/b0e419aa75210f6f11f6f13026b46d22b57aab102df4689ea726910a180a4a29.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 9
+    },
+    {
+        "type": "image",
+        "img_path": "images/85efcd105d0a2ac9fe868d2069bbb069b48900c9e245ef4f70ae7f2a055e933e.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 9
+    },
+    {
+        "type": "image",
+        "img_path": "images/e5f4929b155e2066d3720d7643695488f79cb6525fb08240da9f32b3a162c3b1.jpg",
+        "img_caption": [
+            "Logging of users and their status "
+        ],
+        "img_footnote": [],
+        "page_idx": 10
+    },
+    {
+        "type": "image",
+        "img_path": "images/bbc72909411a7d60b9da88761dab3e515f0b6e3e1b7dc56844a109789bbceff0.jpg",
+        "img_caption": [
+            "（a）Registration Page"
+        ],
+        "img_footnote": [],
+        "page_idx": 10
+    },
+    {
+        "type": "image",
+        "img_path": "images/132690c4979408688c48a330f0a8f758d0c9537a70cb7baa3a5c2dff064f2783.jpg",
+        "img_caption": [
+            "（b）Login Page"
+        ],
+        "img_footnote": [],
+        "page_idx": 10
+    },
+    {
+        "type": "image",
+        "img_path": "images/9df2903ccddc8935f70a60d9743ab3e79b13c79f2b746ebfe4cb16b501613fc4.jpg",
+        "img_caption": [
+            "（c）Main Page"
+        ],
+        "img_footnote": [],
+        "page_idx": 10
+    },
+    {
+        "type": "image",
+        "img_path": "images/871a92c34f5aa1dbf324cb8429c7c786a4df99d0e8cd53d9632be70e959efacf.jpg",
+        "img_caption": [
+            "(d）Upload Data "
+        ],
+        "img_footnote": [],
+        "page_idx": 10
+    },
+    {
+        "type": "image",
+        "img_path": "images/9b295ccca1191c961302aeba2ddc5cfdb92644545585cc94721eaae410a770ec.jpg",
+        "img_caption": [
+            "（e）Positive Status"
+        ],
+        "img_footnote": [],
+        "page_idx": 10
+    },
+    {
+        "type": "image",
+        "img_path": "images/0531c00e628637ff16926336ae6e4922cc247358b1a18bcbdb578aee0b5e2e8f.jpg",
+        "img_caption": [
+            "(f）Negative Status "
+        ],
+        "img_footnote": [],
+        "page_idx": 10
+    },
+    {
+        "type": "image",
+        "img_path": "images/15918bbdc2967ccea3f7ab399c9e0f0e550bdc3a617d2b1753fff2ef1fa9abf1.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 10
+    },
+    {
+        "type": "text",
+        "text": "Logging of user’s smartphone sensor data ",
+        "page_idx": 10
+    },
+    {
+        "type": "text",
+        "text": "Server Side ",
+        "text_level": 1,
+        "page_idx": 10
+    },
+    {
+        "type": "text",
+        "text": "AI- Application in COVID-19 Contact Tracing [1] ",
+        "text_level": 1,
+        "page_idx": 11
+    },
+    {
+        "type": "image",
+        "img_path": "images/e4b32cbeb892d7f8c557058c80abb5a01d3766ce46c9f4e472de31a17f439a59.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 11
+    },
+    {
+        "type": "text",
+        "text": "The proposed architecture for Machine Learning based Bluetooth-based contact tracing to control the spread of COvID-19 ",
+        "text_level": 1,
+        "page_idx": 11
+    },
+    {
+        "type": "text",
+        "text": "I utilized smartphone Bluetooth RSSI values (under Eddystone Beacon protocol) as well as   \naccelerometer,   \ngyroscope and speed   \nsensor values in   \nsmartphone to perform activity   \nclassification, as well as distance estimation using machine learning models. ",
+        "page_idx": 11
+    },
+    {
+        "type": "image",
+        "img_path": "images/7fc555ad9e7beeccc5e8e5a170606cfd11097633384194f9d95c060613db9c69.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 11
+    },
+    {
+        "type": "image",
+        "img_path": "images/b14f116361c7b2c5f579c9f5373f1b33bdc79a641c52def1239efee20e6e3932.jpg",
+        "img_caption": [
+            "Fig.3RSSIdistributionfor1,2,and3mindifferentenvironmentsanduserbehaviour "
+        ],
+        "img_footnote": [],
+        "page_idx": 11
+    },
+    {
+        "type": "text",
+        "text": "Extracted Bluetooth RSSl values during Continuous Beacon Packet sharing between two Smartphones ",
+        "page_idx": 11
+    },
+    {
+        "type": "text",
+        "text": "AI- Application in COVID-19 Dynamics [1,2,3,4] ",
+        "text_level": 1,
+        "page_idx": 12
+    },
+    {
+        "type": "text",
+        "text": "I worked on deep forecasting models, as well as mathematical models (that are made robust with deep learning pipeline) to forecast future COVID-19 states as well as determine optimal policies to control tragedies, all in data-driven manner. ",
+        "page_idx": 12
+    },
+    {
+        "type": "image",
+        "img_path": "images/de0e60b74419c75556ba187b34e4f2eb02c727dbdf16c6bb2c2d3fd000da80a9.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 12
+    },
+    {
+        "type": "text",
+        "text": "Forecasting of COVID-19 Spread (using BiLSTM architecture) ",
+        "text_level": 1,
+        "page_idx": 12
+    },
+    {
+        "type": "image",
+        "img_path": "images/2ff119e911890465bd7f6f82f2db6b23c181298b4de588e7412b6beb66e3f295.jpg",
+        "img_caption": [
+            "Modelling of COvID-19 Spread (using Attention based dynamical system) "
+        ],
+        "img_footnote": [],
+        "page_idx": 12
+    },
+    {
+        "type": "image",
+        "img_path": "images/796a25104454b7fe6ab30f8a73a2949e5b9b1f85d04d3d16086c70a471d1bfe7.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 12
+    },
+    {
+        "type": "image",
+        "img_path": "images/e4596e75ea1ad9e17fdc4bcb175a98b064261b95bfc5da1d44db86eb5e121887.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 13
+    },
+    {
+        "type": "image",
+        "img_path": "images/a1c3803c791eee16482101f60185a2e62517c8fdd16f2edd1c7bec2b0d10d350.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 13
+    },
+    {
+        "type": "image",
+        "img_path": "images/75eb9c08520b03e255229620ffc96307c4cb55cefbc7b5f8338a8e03714d8495.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 13
+    },
+    {
+        "type": "text",
+        "text": "Self-mixing Interferometry [1,2,3,4,5] ",
+        "text_level": 1,
+        "page_idx": 13
+    },
+    {
+        "type": "text",
+        "text": "This was a research project, where I designed novel Fourier transform based algorithms to robustly estimate displacement from an interferometer. ",
+        "page_idx": 13
+    },
+    {
+        "type": "text",
+        "text": "ML-Gym Trainer[1,2] ",
+        "text_level": 1,
+        "page_idx": 13
+    },
+    {
+        "type": "text",
+        "text": "I designed a MATLAB application that used AlexNet to classify the state of gym-trainee’s activity from smartphone accelerometer, as well as estimate mood, count repetitions, estimate future routine. ",
+        "page_idx": 13
+    },
+    {
+        "type": "text",
+        "text": "Career highlights ",
+        "text_level": 1,
+        "page_idx": 14
+    },
+    {
+        "type": "text",
+        "text": "Computer Vision Engineer ",
+        "text_level": 1,
+        "page_idx": 14
+    },
+    {
+        "type": "text",
+        "text": "Kodifly, Islamabad, Pakistan 2025 ",
+        "page_idx": 14
+    },
+    {
+        "type": "text",
+        "text": "Machine Learning Engineer H4Tech, Daejeon, S.Korea 2024 ",
+        "page_idx": 14
+    },
+    {
+        "type": "text",
+        "text": "Graduate Research Assistant ",
+        "text_level": 1,
+        "page_idx": 14
+    },
+    {
+        "type": "text",
+        "text": "Sungkyunkwan University,   \nSuwon, S.Korea   \n2023 ",
+        "page_idx": 14
+    },
+    {
+        "type": "text",
+        "text": "Graduate Research Assistant ",
+        "text_level": 1,
+        "page_idx": 14
+    },
+    {
+        "type": "text",
+        "text": "Korea Aerospace University, Gyeonggi-do, S.Korea 2021 ",
+        "page_idx": 14
+    },
+    {
+        "type": "text",
+        "text": "Contact ",
+        "text_level": 1,
+        "page_idx": 15
+    },
+    {
+        "type": "text",
+        "text": "Junaid Iqbal Khan dianujkotov15@gmail.com +82-10-3367-0802 ",
+        "page_idx": 15
+    },
+    {
+        "type": "image",
+        "img_path": "images/4a9260a5213e8054bec902d661ebcc78b4c0d8a3e19006fa7d1c3c1097b58baf.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 15
+    }
+]
