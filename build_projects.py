@@ -51,62 +51,66 @@ def crawl_repo_details(url):
             response = requests.get(url, timeout=10)
             response.raise_for_status()
             soup = BeautifulSoup(response.text, 'html.parser')
-        
-        # OpenGraph Image
-        og_image = soup.find('meta', property='og:image')
-        image_url = og_image['content'] if og_image else "assets/images/placeholder.jpg"
-        
-        # Description
-        description_meta = soup.find('meta', property='og:description')
-        description = description_meta['content'] if description_meta else ""
-        
-        if description and "Contribute to" in description:
-            description = description.split("Contribute to")[0].strip()
             
-        # Extra images, Videos, and Overview from README
-        extra_images = []
-        extra_videos = []
-        overview_text = ""
-        readme = soup.find('article', class_='markdown-body')
-        if readme:
-            imgs = readme.find_all('img')
-            for img in imgs:
-                src = img.get('src')
-                # Ignore common badges and temporary private images with expiring JWT tokens
-                if src and not any(badge in src for badge in ['badge', 'shield', 'travis', 'circleci', 'github/workflow', 'license', 'visitor-badge']):
-                    if 'jwt=' not in src and 'private-user-images' not in src:
+            # OpenGraph Image
+            og_image = soup.find('meta', property='og:image')
+            image_url = og_image['content'] if og_image else "assets/images/placeholder.jpg"
+            
+            # Description
+            description_meta = soup.find('meta', property='og:description')
+            description = description_meta['content'] if description_meta else ""
+            
+            if description and "Contribute to" in description:
+                description = description.split("Contribute to")[0].strip()
+                
+            # Extra images, Videos, and Overview from README
+            extra_images = []
+            extra_videos = []
+            overview_text = ""
+            readme = soup.find('article', class_='markdown-body')
+            if readme:
+                imgs = readme.find_all('img')
+                for img in imgs:
+                    src = img.get('src')
+                    # Ignore common badges and temporary private images with expiring JWT tokens
+                    if src and not any(badge in src for badge in ['badge', 'shield', 'travis', 'circleci', 'github/workflow', 'license', 'visitor-badge']):
+                        if 'jwt=' not in src and 'private-user-images' not in src:
+                            absolute_src = urljoin(url, src)
+                            extra_images.append(absolute_src)
+                
+                videos = readme.find_all('video')
+                for vid in videos:
+                    src = vid.get('src')
+                    if not src:
+                        source_tag = vid.find('source')
+                        if source_tag:
+                            src = source_tag.get('src')
+                    if src and 'jwt=' not in src and 'private-user-images' not in src:
                         absolute_src = urljoin(url, src)
-                        extra_images.append(absolute_src)
+                        extra_videos.append(absolute_src)
+                        
+                # Extract overview text robustly
+                paragraphs = readme.find_all('p')
+                text_blocks = []
+                for p in paragraphs:
+                    text = p.get_text(separator=' ', strip=True)
+                    # Only keep substantial paragraphs to avoid short captions or diagrams like 'A -> B -> C'
+                    if len(text) > 100 and 'build status' not in text.lower():
+                        text_blocks.append(text)
+                    if len(text_blocks) >= 2:
+                        break
+                
+                # If no substantial text found in paragraphs, leave empty
+                overview_text = " \n\n".join(text_blocks)
+                
+            return image_url, description, extra_images, extra_videos, overview_text
             
-            videos = readme.find_all('video')
-            for vid in videos:
-                src = vid.get('src')
-                if not src:
-                    source_tag = vid.find('source')
-                    if source_tag:
-                        src = source_tag.get('src')
-                if src and 'jwt=' not in src and 'private-user-images' not in src:
-                    absolute_src = urljoin(url, src)
-                    extra_videos.append(absolute_src)
-                    
-            # Extract overview text robustly
-            paragraphs = readme.find_all('p')
-            text_blocks = []
-            for p in paragraphs:
-                text = p.get_text(separator=' ', strip=True)
-                # Only keep substantial paragraphs to avoid short captions or diagrams like 'A -> B -> C'
-                if len(text) > 100 and 'build status' not in text.lower():
-                    text_blocks.append(text)
-                if len(text_blocks) >= 2:
-                    break
-            
-            # If no substantial text found in paragraphs, leave empty
-            overview_text = " \n\n".join(text_blocks)
-            
-        return image_url, description, extra_images, extra_videos, overview_text
-    except Exception as e:
-        print(f"Failed to crawl {url}: {e}")
-        return "assets/images/placeholder.jpg", "", [], [], ""
+        except Exception as e:
+            print(f"Attempt {attempt+1} failed for {url}: {e}")
+            if attempt < 2:
+                time.sleep(2)
+            else:
+                return "assets/images/placeholder.jpg", "", [], [], ""
 
 def main():
     categories = parse_markdown()

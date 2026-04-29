@@ -382,6 +382,7 @@ nav {
   mask-composite: exclude;
   opacity: 0;
   transition: opacity 0.4s;
+  pointer-events: none;
 }
 
 .project-card:hover {
@@ -540,6 +541,34 @@ nav {
   color: var(--text-secondary);
   font-size: 0.95rem;
   line-height: 1.7;
+}
+
+.project-links {
+  margin-top: auto;
+  padding-top: 1.5rem;
+}
+
+.repo-link-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.2rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--surface-border);
+  border-radius: 8px;
+  color: var(--text-primary);
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all var(--transition-speed);
+  text-decoration: none;
+}
+
+.repo-link-btn:hover {
+  background: var(--gradient-primary);
+  color: white;
+  border-color: transparent;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(139, 92, 246, 0.3);
 }
 
 /* Career Timeline */

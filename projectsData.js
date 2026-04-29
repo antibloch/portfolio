@@ -1429,7 +1429,7 @@ const PROJECTS_DATA = [
     "title": "ai_agent",
     "category": "nlp",
     "categoryName": "Natural Language Processing",
-    "image": "assets/images/placeholder.jpg",
+    "image": "https://opengraph.githubassets.com/aaa3200027b0499699018322a4fd0e7cf12ebe5ad52656052d403e90325b5707/antibloch/ai_agent",
     "extra_images": [],
     "extra_videos": [],
     "description": "LLM agent patterns",
