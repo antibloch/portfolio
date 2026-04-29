@@ -1,0 +1,158 @@
+import os
+import re
+import json
+import requests
+from bs4 import BeautifulSoup
+from urllib.parse import urljoin
+
+MD_FILE = "github_repos.md"
+JS_OUTPUT = "projectsData.js"
+
+def parse_markdown():
+    categories = {}
+    current_category = None
+    
+    with open(MD_FILE, 'r', encoding='utf-8') as f:
+        for line in f:
+            line = line.strip()
+            # New Category
+            if line.startswith('## ') and not line.startswith('## Summary'):
+                current_category = line[3:].strip()
+                categories[current_category] = []
+            
+            # Repo match
+            if current_category and line.startswith('| [') and not line.startswith('| Repository'):
+                # Extract repo name and url
+                match = re.match(r'\|\s*\[([^\]]+)\]\(([^)]+)\)', line)
+                if match:
+                    repo_name = match.group(1)
+                    repo_url = match.group(2)
+                    
+                    # Also extract purpose from the 2nd column
+                    parts = line.split('|')
+                    purpose = parts[2].strip() if len(parts) >= 3 else ""
+                    tech_stack = parts[3].strip() if len(parts) >= 4 else ""
+                    features = parts[4].strip() if len(parts) >= 5 else ""
+                        
+                    categories[current_category].append({
+                        "name": repo_name,
+                        "url": repo_url,
+                        "purpose": purpose,
+                        "tech_stack": [t.strip() for t in tech_stack.split(',') if t.strip()],
+                        "features": features
+                    })
+    return categories
+
+def crawl_repo_details(url):
+    print(f"Crawling: {url}")
+    import time
+    for attempt in range(3):
+        try:
+            response = requests.get(url, timeout=10)
+            response.raise_for_status()
+            soup = BeautifulSoup(response.text, 'html.parser')
+        
+        # OpenGraph Image
+        og_image = soup.find('meta', property='og:image')
+        image_url = og_image['content'] if og_image else "assets/images/placeholder.jpg"
+        
+        # Description
+        description_meta = soup.find('meta', property='og:description')
+        description = description_meta['content'] if description_meta else ""
+        
+        if description and "Contribute to" in description:
+            description = description.split("Contribute to")[0].strip()
+            
+        # Extra images, Videos, and Overview from README
+        extra_images = []
+        extra_videos = []
+        overview_text = ""
+        readme = soup.find('article', class_='markdown-body')
+        if readme:
+            imgs = readme.find_all('img')
+            for img in imgs:
+                src = img.get('src')
+                # Ignore common badges and temporary private images with expiring JWT tokens
+                if src and not any(badge in src for badge in ['badge', 'shield', 'travis', 'circleci', 'github/workflow', 'license', 'visitor-badge']):
+                    if 'jwt=' not in src and 'private-user-images' not in src:
+                        absolute_src = urljoin(url, src)
+                        extra_images.append(absolute_src)
+            
+            videos = readme.find_all('video')
+            for vid in videos:
+                src = vid.get('src')
+                if not src:
+                    source_tag = vid.find('source')
+                    if source_tag:
+                        src = source_tag.get('src')
+                if src and 'jwt=' not in src and 'private-user-images' not in src:
+                    absolute_src = urljoin(url, src)
+                    extra_videos.append(absolute_src)
+                    
+            # Extract overview text robustly
+            paragraphs = readme.find_all('p')
+            text_blocks = []
+            for p in paragraphs:
+                text = p.get_text(separator=' ', strip=True)
+                # Only keep substantial paragraphs to avoid short captions or diagrams like 'A -> B -> C'
+                if len(text) > 100 and 'build status' not in text.lower():
+                    text_blocks.append(text)
+                if len(text_blocks) >= 2:
+                    break
+            
+            # If no substantial text found in paragraphs, leave empty
+            overview_text = " \n\n".join(text_blocks)
+            
+        return image_url, description, extra_images, extra_videos, overview_text
+    except Exception as e:
+        print(f"Failed to crawl {url}: {e}")
+        return "assets/images/placeholder.jpg", "", [], [], ""
+
+def main():
+    categories = parse_markdown()
+    
+    projects_data = []
+    
+    category_slugs = {
+        "ML Privacy & Security": "privacy",
+        "Radar & ECG Signal Processing": "radar",
+        "Computer Vision": "cv",
+        "Natural Language Processing": "nlp",
+        "Chemical & Brain Analysis": "brain",
+        "Accelerometer, COVID-19 & Misc ML": "misc",
+        "App & Web Development": "apps"
+    }
+    
+    for cat, repos in categories.items():
+        slug = category_slugs.get(cat, "misc")
+        
+        for repo in repos:
+            image_url, description, extra_images, extra_videos, overview_text = crawl_repo_details(repo['url'])
+            
+            # Use 'purpose' from table if crawled description is empty
+            if not description:
+                description = repo['purpose']
+                
+            projects_data.append({
+                "title": repo['name'],
+                "category": slug,
+                "categoryName": cat,
+                "image": image_url,
+                "extra_images": extra_images,
+                "extra_videos": extra_videos,
+                "description": description,
+                "overview": overview_text,
+                "tech_stack": repo['tech_stack'],
+                "features": repo['features'],
+                "url": repo['url']
+            })
+            
+    # Write to JS
+    js_content = f"const PROJECTS_DATA = {json.dumps(projects_data, indent=2)};\n"
+    with open(JS_OUTPUT, 'w', encoding='utf-8') as f:
+        f.write(js_content)
+    
+    print("projectsData.js generated successfully!")
+
+if __name__ == "__main__":
+    main()
