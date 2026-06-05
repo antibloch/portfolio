@@ -130,17 +130,17 @@
 
 ---
 
-## Natural Language Processing
+## LLMs and AI Agents
 
 | Repository | Purpose | Tech Stack | Key Features |
 |------------|---------|------------|--------------|
-| [donor_readiness](https://github.com/antibloch/donor_readiness) | Donor readiness prediction | PyTorch, scikit-learn, XGBoost | Time-series feature engineering; LSTM, Transformer, XGBoost classifiers |
-| [donor_readiness_scorer](https://github.com/antibloch/donor_readiness_scorer) | Donor scoring Streamlit app | Streamlit, ONNX Runtime | ONNX inference UI for donation probability |
 | [donor_agent](https://github.com/antibloch/donor_agent) | Donor assistance agent | LangGraph, FastAPI, NVIDIA NIM | Multi-node pipeline: planner → validator → executor → gate → responder |
 | [ai_agent](https://github.com/antibloch/ai_agent) | LLM agent patterns | LangGraph, LangChain, MCP | ReAct, Tree-of-Thought, Reflexion, planner-validator-executor patterns |
 | [doc_qa_project](https://github.com/antibloch/doc_qa_project) | LLM agent patterns | LangChain, FAISS, NVIDIA-NIM, Flask | RAG |
 | [llm_finetuning](https://github.com/antibloch/llm_finetuning) | LLM fine-tuning scripts | PyTorch, TRL, Unsloth, Axolotl | Full-parameter and LoRA fine-tuning (Llama, etc.) |
 | [ml_reviewer](https://github.com/antibloch/ml_reviewer) | ML literature agent | Python, OpenAI, HF | Paper search/summarization with SmolAgents |
+| [donor_readiness](https://github.com/antibloch/donor_readiness) | Donor readiness prediction | PyTorch, scikit-learn, XGBoost | Time-series feature engineering; LSTM, Transformer, XGBoost classifiers |
+| [donor_readiness_scorer](https://github.com/antibloch/donor_readiness_scorer) | Donor scoring Streamlit app | Streamlit, ONNX Runtime | ONNX inference UI for donation probability |
 | [text_signal_classification](https://github.com/superdianuj/text_signal_classification) | Signal-based text classification | TensorFlow, Librosa | Fourier-domain text representation; WaveNet, Conv1D for cyberbully detection |
 | [text_summarization](https://github.com/dianujer/text_summarization) | Text summarization | PyTorch | Extractive and abstractive (BART, T5) |
 | [toxity_ranker](https://github.com/dianujer/toxity_ranker) | Toxicity ranking | PyTorch | Jigsaw-trained toxicity models |

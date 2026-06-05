@@ -33,11 +33,22 @@ document.addEventListener('DOMContentLoaded', () => {
     projectsContainer.style.display = 'flex';
     projectsContainer.style.flexDirection = 'column';
     projectsContainer.style.gap = '4rem';
+    
+    const initialPlaceholder = document.createElement('p');
+    initialPlaceholder.id = 'projects-placeholder';
+    initialPlaceholder.style.textAlign = 'center';
+    initialPlaceholder.style.color = 'var(--text-secondary)';
+    initialPlaceholder.style.marginTop = '2rem';
+    initialPlaceholder.textContent = 'Select a category above to view projects.';
+    projectsContainer.appendChild(initialPlaceholder);
 
     for (const [categoryName, data] of Object.entries(groupedProjects)) {
       const section = document.createElement('div');
       section.className = 'category-section';
       section.setAttribute('data-category', data.slug);
+      section.style.display = 'none';
+      section.style.opacity = '0';
+      section.style.transform = 'scale(0.9)';
       
       const heading = document.createElement('h3');
       heading.className = 'category-heading';
@@ -84,14 +95,22 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         
         article.innerHTML = `
-          <div class="project-images">
-            ${imagesHTML}
+          <div class="project-summary" style="cursor: pointer;">
+            <div class="project-images" style="pointer-events: none;">
+              ${imagesHTML}
+            </div>
+            <div class="project-header" style="padding: 1.8rem; padding-bottom: 1rem;">
+              <h3 style="pointer-events: auto;"><a href="${project.url}" target="_blank" rel="noopener noreferrer" style="pointer-events: auto;">${project.title}</a></h3>
+              <p class="project-category-tag">${project.categoryName}</p>
+              <div class="tech-stack-container">${techStackHTML}</div>
+              <p class="project-description">${project.description}</p>
+              <div class="expand-indicator" style="text-align: center; color: var(--text-secondary); margin-top: 15px; font-size: 0.85rem; font-weight: 500; display: flex; align-items: center; justify-content: center; gap: 5px;">
+                <span class="expand-text">Click to expand</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="chevron" style="transition: transform 0.3s;"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </div>
+            </div>
           </div>
-          <div class="project-content">
-            <h3><a href="${project.url}" target="_blank" rel="noopener noreferrer">${project.title}</a></h3>
-            <p class="project-category-tag">${project.categoryName}</p>
-            <div class="tech-stack-container">${techStackHTML}</div>
-            <p class="project-description">${project.description}</p>
+          <div class="project-details" style="display: none; padding: 0 1.8rem 1.8rem 1.8rem; border-top: 1px solid var(--surface-border);">
             ${overviewHTML}
             ${featuresHTML}
             <div class="project-links">
@@ -102,6 +121,27 @@ document.addEventListener('DOMContentLoaded', () => {
             </div>
           </div>
         `;
+        
+        // Add click event for expanding/collapsing
+        const summary = article.querySelector('.project-summary');
+        const details = article.querySelector('.project-details');
+        const chevron = article.querySelector('.chevron');
+        const expandText = article.querySelector('.expand-text');
+        
+        summary.addEventListener('click', (e) => {
+          // Prevent collapsing when clicking the title link
+          if(e.target.tagName.toLowerCase() === 'a') return;
+          
+          if (details.style.display === 'none') {
+            details.style.display = 'block';
+            chevron.style.transform = 'rotate(180deg)';
+            expandText.textContent = 'Click to collapse';
+          } else {
+            details.style.display = 'none';
+            chevron.style.transform = 'rotate(0deg)';
+            expandText.textContent = 'Click to expand';
+          }
+        });
         grid.appendChild(article);
       });
       
@@ -113,11 +153,14 @@ document.addEventListener('DOMContentLoaded', () => {
   // --- Project Filtering ---
   const filterBtns = document.querySelectorAll('.filter-btn');
   const categorySections = document.querySelectorAll('.category-section');
+  const placeholder = document.getElementById('projects-placeholder');
 
   filterBtns.forEach(btn => {
     btn.addEventListener('click', () => {
       filterBtns.forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
+      
+      if (placeholder) placeholder.style.display = 'none';
       
       const filterValue = btn.getAttribute('data-filter');
       

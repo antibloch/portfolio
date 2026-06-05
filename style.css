@@ -425,26 +425,25 @@ nav {
   transform: scale(1.05);
 }
 
-.project-content {
-  padding: 1.8rem;
+.project-summary {
   flex-grow: 1;
   display: flex;
   flex-direction: column;
 }
 
-.project-content h3 {
+.project-header h3, .project-details h3 {
   font-size: 1.35rem;
   margin-bottom: 0.8rem;
   color: var(--text-primary);
   font-weight: 700;
 }
 
-.project-content h3 a {
+.project-header h3 a, .project-details h3 a {
   color: inherit;
   text-decoration: none;
 }
 
-.project-content h3 a:hover {
+.project-header h3 a:hover, .project-details h3 a:hover {
   background: var(--gradient-primary);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -537,7 +536,7 @@ nav {
   border-radius: 10px;
 }
 
-.project-content p.project-description {
+.project-header p.project-description, .project-details p.project-description {
   color: var(--text-secondary);
   font-size: 0.95rem;
   line-height: 1.7;
@@ -759,4 +758,21 @@ nav {
   .nav-links {
     display: none; /* simple mobile nav */
   }
+}
+
+.project-summary {
+  transition: background-color 0.3s ease;
+}
+
+.project-summary:hover {
+  background-color: rgba(255, 255, 255, 0.02);
+}
+
+.expand-indicator {
+  opacity: 0.7;
+  transition: opacity 0.3s;
+}
+
+.project-summary:hover .expand-indicator {
+  opacity: 1;
 }
