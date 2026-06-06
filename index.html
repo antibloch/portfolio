@@ -17,6 +17,7 @@
         <li><a href="#about">About</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#projects">Projects</a></li>
+        <li><a href="#publications">Publications</a></li>
         <li><a href="#career">Career</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
@@ -76,17 +77,53 @@
       <h2>Projects</h2>
       
       <div class="filter-tabs">
-        <button class="filter-btn" data-filter="privacy">Privacy ML</button>
-        <button class="filter-btn" data-filter="radar">Radar & Signal</button>
-        <button class="filter-btn" data-filter="cv">Computer Vision</button>
-        <button class="filter-btn" data-filter="nlp">LLMs and AI Agents</button>
-        <button class="filter-btn" data-filter="brain">Brain & Chemistry</button>
-        <button class="filter-btn" data-filter="misc">Misc ML</button>
-        <button class="filter-btn" data-filter="apps">Apps & Web</button>
+        <div class="filter-card" data-filter="privacy">
+          <div class="icon">🛡️</div>
+          <h3>Privacy ML</h3>
+          <p>Privacy-preserving ML, federated learning, and secure data processing.</p>
+        </div>
+        <div class="filter-card" data-filter="radar">
+          <div class="icon">📡</div>
+          <h3>Radar & Signal</h3>
+          <p>Signal processing, self-mixing interferometry, and frequency analysis.</p>
+        </div>
+        <div class="filter-card" data-filter="cv">
+          <div class="icon">👁️</div>
+          <h3>Computer Vision</h3>
+          <p>Object detection, image segmentation, NeRFs, and spatial intelligence.</p>
+        </div>
+        <div class="filter-card" data-filter="nlp">
+          <div class="icon">🤖</div>
+          <h3>LLMs & AI Agents</h3>
+          <p>Agentic workflows, RAG systems, and custom language model solutions.</p>
+        </div>
+        <div class="filter-card" data-filter="brain">
+          <div class="icon">🧬</div>
+          <h3>Brain & Chemistry</h3>
+          <p>Machine learning applications in neuroscience and chemistry.</p>
+        </div>
+        <div class="filter-card" data-filter="misc">
+          <div class="icon">🔬</div>
+          <h3>Misc ML</h3>
+          <p>Exploratory machine learning experiments, tools, and miscellaneous algorithms.</p>
+        </div>
+        <div class="filter-card" data-filter="apps">
+          <div class="icon">💻</div>
+          <h3>Apps & Web</h3>
+          <p>Full-stack web applications and cross-platform mobile development.</p>
+        </div>
       </div>
 
       <div id="projects-container">
         <!-- Projects will be dynamically injected here via script.js -->
+      </div>
+    </section>
+
+    <!-- Publications Section -->
+    <section id="publications" class="container fade-in">
+      <h2>Publications</h2>
+      <div id="publications-container" class="publications-grid">
+        <!-- Publications will be dynamically injected here via script.js -->
       </div>
     </section>
 
@@ -159,6 +196,7 @@
   </div>
 
   <script src="projectsData.js"></script>
+  <script src="publicationsData.js"></script>
   <script src="script.js"></script>
 </body>
 </html>

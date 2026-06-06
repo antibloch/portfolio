@@ -151,7 +151,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // --- Project Filtering ---
-  const filterBtns = document.querySelectorAll('.filter-btn');
+  const filterBtns = document.querySelectorAll('.filter-card');
   const categorySections = document.querySelectorAll('.category-section');
   const placeholder = document.getElementById('projects-placeholder');
 
@@ -167,13 +167,37 @@ document.addEventListener('DOMContentLoaded', () => {
       categorySections.forEach(section => {
         if (filterValue === 'all' || section.getAttribute('data-category') === filterValue) {
           section.style.display = 'block';
-          setTimeout(() => { section.style.opacity = '1'; section.style.transform = 'scale(1)'; }, 10);
+          setTimeout(() => { 
+            section.style.opacity = '1'; 
+            section.style.transform = 'scale(1)'; 
+            
+            // Staggered animation for project cards
+            const cards = section.querySelectorAll('.project-card');
+            cards.forEach((c, i) => {
+              c.classList.remove('animate-card');
+              void c.offsetWidth; // Force reflow
+              c.style.animationDelay = `${i * 0.1}s`;
+              c.style.opacity = '0'; // Ensure it's hidden before animation starts
+              c.classList.add('animate-card');
+            });
+          }, 10);
         } else {
           section.style.opacity = '0';
           section.style.transform = 'scale(0.9)';
           setTimeout(() => { section.style.display = 'none'; }, 300);
         }
       });
+
+      // Smoothly scroll to the projects container so the transition is visible
+      setTimeout(() => {
+        const headerOffset = 100;
+        const elementPosition = document.getElementById('projects-container').getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+        window.scrollTo({
+           top: offsetPosition,
+           behavior: "smooth"
+        });
+      }, 50);
     });
   });
 
@@ -207,5 +231,31 @@ document.addEventListener('DOMContentLoaded', () => {
       closeLightbox();
     }
   });
+
+  // --- Dynamic Publications Rendering ---
+  const publicationsContainer = document.getElementById('publications-container');
+  if (typeof PUBLICATIONS_DATA !== 'undefined' && publicationsContainer) {
+    PUBLICATIONS_DATA.forEach(pub => {
+      const pubCard = document.createElement('div');
+      pubCard.className = 'publication-card';
+      
+      const citationsHtml = pub.citations ? `<span class="citations">Citations: ${pub.citations}</span>` : '';
+      const yearHtml = pub.year ? `<span>Year: ${pub.year}</span>` : '';
+
+      pubCard.innerHTML = `
+        <div class="publication-title">
+          <a href="${pub.link}" target="_blank" rel="noopener noreferrer">${pub.title}</a>
+        </div>
+        <div class="publication-authors">${pub.authors}</div>
+        <div class="publication-venue">${pub.venue}</div>
+        <div class="publication-meta">
+          ${yearHtml}
+          ${citationsHtml}
+        </div>
+      `;
+      
+      publicationsContainer.appendChild(pubCard);
+    });
+  }
 
 });
