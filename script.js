@@ -247,7 +247,11 @@ document.addEventListener('DOMContentLoaded', () => {
           <a href="${pub.link}" target="_blank" rel="noopener noreferrer">${pub.title}</a>
         </div>
         <div class="publication-authors">${pub.authors}</div>
-        <div class="publication-venue">${pub.venue}</div>
+        <div class="publication-venue">
+          <span class="pub-publisher">${pub.publisher}</span> 
+          <span class="pub-journal">${pub.journal}</span> 
+          <span class="pub-details">${pub.details}</span>
+        </div>
         <div class="publication-meta">
           ${yearHtml}
           ${citationsHtml}

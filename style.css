@@ -845,9 +845,28 @@ nav {
 }
 
 .publication-venue {
-  color: #c4b5fd;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   font-style: italic;
+  letter-spacing: 0.5px;
+  margin-top: 0.2rem;
+}
+
+.pub-publisher {
+  color: #93c5fd;
+  font-weight: 700;
+  text-shadow: 0 0 8px rgba(59, 130, 246, 0.8), 0 0 15px rgba(59, 130, 246, 0.5);
+}
+
+.pub-journal {
+  color: #e9d5ff;
+  font-weight: 700;
+  text-shadow: 0 0 8px rgba(139, 92, 246, 0.8), 0 0 15px rgba(139, 92, 246, 0.5);
+}
+
+.pub-details {
+  color: var(--text-secondary);
+  font-weight: 400;
+  text-shadow: none;
 }
 
 .publication-meta {
