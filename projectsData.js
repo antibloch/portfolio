@@ -1476,15 +1476,15 @@ const PROJECTS_DATA = [
     "image": "assets/images/projects/flavorwiki_react_agent_workflow/og_image.jpg",
     "extra_images": [],
     "extra_videos": [],
-    "description": "My workflow for building ReAcT agent at recent place I worked - antibloch/flavorwiki_react_agent_workflow",
-    "overview": "Everything needed to run, serve, benchmark and understand funda_agent_exp.py \u2014 the LangGraph\nsurvey-analyst agent \u2014 copied out of flavorai_v2 as a self-contained bundle. \n\nfunda_agent_exp.py hardcodes live credentials at lines 56\u201361: an OpenAI API key, the DATABASE_URI , and the Charts API secret. os.getenv still wins, so a real .env overrides\nthem, but the literals are in the file and are now in this bundle too.",
+    "description": "LangGraph ReAct survey-analysis agent plus the gated workflow used to build and patch it: defect localization, isolated AI graders, and an approval-gated deployment sync.",
+    "overview": "The agent (funda_agent_exp.py) answers consumer-survey questions over PostgreSQL in an LLM\u2194tools loop: five registered tools (nl2sql, survey inventory, statistics API, PLSR, word cloud), layered SQL guardrails (sqlglot parsing, semantic-filter rejection, read-only transactions, bounded scope repair), step budgeting and history trimming, and trusted artifacts spliced in at final assembly so model text never carries chart or word-cloud numbers. Model-facing rules live apart from runtime code (agent_instructions.py, tool_prompts.py), keeping the system prompt a byte-stable prompt-cache prefix.\n\n\nThe workflow (PROTOCOL.md) gates every change: step 0 localizes a defect along an explicit boundary chain and proves the causal diagnosis with a discrimination probe; edits are precision strikes located through a generated prompt map; one-run fix and regression probes come from a regression.xlsx catalogue; step 4 hands every transcript to isolated graders loaded as built-in skills \u2014 oracle_agent derives a statistically honest ground-truth answer and a reference trajectory log, trace_compare returns separate CONTENT and TRAJECTORY verdicts against them, contract_review checks presentation rules, causal localization and correction obligations, agent-prompt-mapper maintains the prompt inventory; step 5 is the user approval gate before anything mirrors into deployment/. Core invariant: the producer never judges, the judges never derive, and the session that wrote the fix never grades it.",
     "tech_stack": [
       "LangGraph",
       "FastAPI",
       "PostgreSQL",
       "Claude Code/Codex skills"
     ],
-    "features": "LLM\u2194tools graph with SQL guardrails; oracle + dual-judge evaluation harness; gated PROTOCOL.md patch workflow",
+    "features": "PROTOCOL.md gated patch workflow: localize \u2192 discrimination probe \u2192 precision-strike fix \u2192 single-run probes \u2192 isolated grading via oracle_agent / trace_compare / contract_review / agent-prompt-mapper skills \u2192 approval \u2192 deployment sync",
     "url": "https://github.com/antibloch/flavorwiki_react_agent_workflow"
   },
   {
