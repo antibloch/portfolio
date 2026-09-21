@@ -136,6 +136,7 @@
 |------------|---------|------------|--------------|
 | [donor_agent](https://github.com/antibloch/donor_agent) | Donor assistance agent | LangGraph, FastAPI, NVIDIA NIM | Multi-node pipeline: planner → validator → executor → gate → responder |
 | [ai_agent](https://github.com/antibloch/ai_agent) | LLM agent patterns | LangGraph, LangChain, MCP | ReAct, Tree-of-Thought, Reflexion, planner-validator-executor patterns |
+| [flavorwiki_react_agent_workflow](https://github.com/antibloch/flavorwiki_react_agent_workflow) | ReAct survey-analysis agent + prompt-regression workflow | LangGraph, FastAPI, PostgreSQL, Claude Code/Codex skills | LLM↔tools graph with SQL guardrails; oracle + dual-judge evaluation harness; gated PROTOCOL.md patch workflow |
 | [doc_qa_project](https://github.com/antibloch/doc_qa_project) | LLM agent patterns | LangChain, FAISS, NVIDIA-NIM, Flask | RAG |
 | [llm_finetuning](https://github.com/antibloch/llm_finetuning) | LLM fine-tuning scripts | PyTorch, TRL, Unsloth, Axolotl | Full-parameter and LoRA fine-tuning (Llama, etc.) |
 | [ml_reviewer](https://github.com/antibloch/ml_reviewer) | ML literature agent | Python, OpenAI, HF | Paper search/summarization with SmolAgents |
@@ -199,8 +200,8 @@
 | ML Privacy & Security | 15 |
 | Radar & ECG Signal Processing | 7 |
 | Computer Vision | 35 |
-| Natural Language Processing | 14 |
+| Natural Language Processing | 15 |
 | Chemical & Brain Analysis | 5 |
 | Accelerometer, COVID & Misc | 4 |
 | App & Web Development | 3 |
-| **Total** | **83** |
+| **Total** | **84** |

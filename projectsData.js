@@ -1470,6 +1470,24 @@ const PROJECTS_DATA = [
     "url": "https://github.com/antibloch/ai_agent"
   },
   {
+    "title": "flavorwiki_react_agent_workflow",
+    "category": "nlp",
+    "categoryName": "LLMs and AI Agents",
+    "image": "assets/images/projects/flavorwiki_react_agent_workflow/og_image.jpg",
+    "extra_images": [],
+    "extra_videos": [],
+    "description": "My workflow for building ReAcT agent at recent place I worked - antibloch/flavorwiki_react_agent_workflow",
+    "overview": "Everything needed to run, serve, benchmark and understand funda_agent_exp.py \u2014 the LangGraph\nsurvey-analyst agent \u2014 copied out of flavorai_v2 as a self-contained bundle. \n\nfunda_agent_exp.py hardcodes live credentials at lines 56\u201361: an OpenAI API key, the DATABASE_URI , and the Charts API secret. os.getenv still wins, so a real .env overrides\nthem, but the literals are in the file and are now in this bundle too.",
+    "tech_stack": [
+      "LangGraph",
+      "FastAPI",
+      "PostgreSQL",
+      "Claude Code/Codex skills"
+    ],
+    "features": "LLM\u2194tools graph with SQL guardrails; oracle + dual-judge evaluation harness; gated PROTOCOL.md patch workflow",
+    "url": "https://github.com/antibloch/flavorwiki_react_agent_workflow"
+  },
+  {
     "title": "doc_qa_project",
     "category": "nlp",
     "categoryName": "LLMs and AI Agents",
