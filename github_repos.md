@@ -136,7 +136,7 @@
 |------------|---------|------------|--------------|
 | [donor_agent](https://github.com/antibloch/donor_agent) | Donor assistance agent | LangGraph, FastAPI, NVIDIA NIM | Multi-node pipeline: planner → validator → executor → gate → responder |
 | [ai_agent](https://github.com/antibloch/ai_agent) | LLM agent patterns | LangGraph, LangChain, MCP | ReAct, Tree-of-Thought, Reflexion, planner-validator-executor patterns |
-| [flavorwiki_react_agent_workflow](https://github.com/antibloch/flavorwiki_react_agent_workflow) | AI assistant for plain-English survey Q&A + safe patch workflow | LangGraph, FastAPI, PostgreSQL, AI agent skills | Ask survey questions in everyday language, get charts and statistics; every fix is graded by independent AI reviewers before a human approves release |
+| [flavorwiki_react_agent_workflow](https://github.com/antibloch/flavorwiki_react_agent_workflow) | AI assistant for plain-English survey Q&A + safe patch workflow | LangGraph, FastAPI, PostgreSQL, AI agent skills | Plain-English Q&A over survey data with charts and statistics; Claude Code skills workflow (oracle_agent, trace_compare, contract_review) provides testing, regression and causality checks — every fix graded by independent AI reviewers before a human approves release |
 | [doc_qa_project](https://github.com/antibloch/doc_qa_project) | LLM agent patterns | LangChain, FAISS, NVIDIA-NIM, Flask | RAG |
 | [llm_finetuning](https://github.com/antibloch/llm_finetuning) | LLM fine-tuning scripts | PyTorch, TRL, Unsloth, Axolotl | Full-parameter and LoRA fine-tuning (Llama, etc.) |
 | [ml_reviewer](https://github.com/antibloch/ml_reviewer) | ML literature agent | Python, OpenAI, HF | Paper search/summarization with SmolAgents |

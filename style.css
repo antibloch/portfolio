@@ -661,17 +661,6 @@ nav {
   margin-bottom: 0.5rem;
 }
 
-.timeline-content ul {
-  margin-top: 0.75rem;
-  padding-left: 1.25rem;
-  color: var(--text-secondary);
-}
-
-.timeline-content ul li {
-  margin-bottom: 0.5rem;
-  list-style: disc;
-}
-
 /* Contact */
 .contact-section {
   text-align: center;
