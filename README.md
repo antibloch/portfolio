@@ -1,6 +1,6 @@
 # Junaid Iqbal Khan — Living Systems
 
-A local, self-contained portfolio with an original Living Systems identity: forest green, lime, editorial serif typography, orbital framing, rounded dimensional modules, and a responsive split composition. The interactive frame began as an adaptation of the reference’s engineering blueprint. Built with HTML, CSS 3D transforms, and vanilla JavaScript. No package installation, build step, CDN, analytics, or backend required.
+A local, self-contained portfolio with an original Living Systems identity: forest green, lime, editorial serif typography, orbital framing, rounded dimensional modules, and a full-width interactive canvas beneath a compact identity header. The interactive frame began as an adaptation of the reference’s engineering blueprint. Built with HTML, CSS 3D transforms, and vanilla JavaScript. No package installation, build step, CDN, analytics, or backend required.
 
 ## Run
 
@@ -14,6 +14,8 @@ Open http://127.0.0.1:8765. Alternatively, open index.html directly (clipboard c
 ## Explore
 
 - Click a raised module or a bottom navigation button to open a sheet.
+- Sections rise outward in a staggered loop and lift further on hover or focus. Pause Lift stops the loop; reduced-motion preferences disable it automatically.
+- The frame has a full-width canvas, free of introduction-panel overlap and inner clipping.
 - Escape closes the sheet; left/right arrows move between sheets.
 - Use Tab and Enter for keyboard navigation. Native dialogs contain focus and return it to the trigger.
 - Project search matches titles, descriptions, and tools; category buttons filter all 101 projects.

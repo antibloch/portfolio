@@ -18,3 +18,35 @@ dialog{background:radial-gradient(ellipse at 100% 0,#284b2c55,transparent 45%),#
 .filters .category-tile[aria-pressed=true]{background:radial-gradient(ellipse at 40% 30%,color-mix(in srgb,var(--field) 28%,transparent),transparent 75%),var(--field-bg);border-color:var(--field);color:#f4f9ec;box-shadow:inset 0 0 0 1px var(--field),0 0 22px color-mix(in srgb,var(--field) 9%,transparent)}.category-tile[aria-pressed=true] .category-select{background:var(--field);color:var(--field-bg);width:22px;height:22px;display:grid;place-items:center;border-radius:50%;font-size:0}.category-tile[aria-pressed=true] .category-select:after{content:'✓';font-size:13px}
 @media(max-width:850px){.filters{grid-template-columns:repeat(2,minmax(0,1fr))}.filters .category-tile{min-height:235px}.category-title{max-width:none}.category-note{max-width:none}}
 @media(max-width:450px){.filters{gap:9px}.filters .category-tile{padding:12px 11px 30px;min-height:242px;border-radius:13px}.category-count{font-size:7px;padding:3px 5px}.category-top{font-size:8px}.category-scene{height:88px;margin:7px 0 9px}.category-title{font-size:12px}.category-note{font-size:9px}.category-select{right:11px;bottom:10px}}
+/* An open, full-width canvas keeps identity out of the frame's movement path. */
+body{overflow-x:clip}
+#workspace{display:block;max-width:1800px;padding:0 4%}
+.intro{display:flex;align-items:center;justify-content:space-between;gap:30px;padding:27px 0 8px;z-index:auto;pointer-events:none}
+.intro>div{display:grid;grid-template-columns:auto auto;align-items:center;column-gap:28px}
+.intro .eyebrow{grid-column:1/-1;margin:0 0 8px}
+h1{font-size:clamp(28px,3.1vw,48px);line-height:1.1;letter-spacing:-1.8px;margin:0;max-width:none}
+h1 span{font-size:.6em;margin:0 0 0 12px}.intro .role{font-size:13px;margin:0;align-self:end;padding-bottom:5px}.intro .hero-note,.hero-index{display:none}
+.intro .hero-cta{display:none}.intro>.instruction{display:block;margin:0;text-align:right;line-height:1.9;font-size:9px}
+.stage{height:760px;width:100%;margin:0;overflow:visible;z-index:2;isolation:isolate}
+.stage:before{width:85%;height:82%}.stage:after{width:70%;height:94%}
+.blueprint{width:min(1040px,80vw);--view-scale:1;--base-tilt:20deg;--base-roll:-10deg;padding:24px;border-radius:30px}
+.flat .blueprint{--view-scale:1}.modules{gap:18px}.module{min-height:165px;padding:23px;overflow:visible}
+.module-label{font-size:15px;letter-spacing:1px;margin-bottom:23px;font-weight:600}.module-foot{font-size:9px;line-height:1.6;letter-spacing:.4px}
+.about strong{font-size:48px}.about .module-foot{max-width:230px}.contact{min-height:90px}.contact strong{font-size:30px}.board-top{font-size:10px}.board-bottom{font-size:9px}
+.mini-grid i{font-size:12px;padding:10px}.papers i{width:39px;height:47px}.timeline-drawing{margin:38px 0}.bars{margin:15px 0}.view-tools{position:relative;z-index:3;margin:12px 0 30px;flex-wrap:wrap}.view-tools>.eyebrow{display:inline}.axis{bottom:5px;right:0}.view-tools button[aria-pressed=true]{border-color:var(--accent);color:var(--accent)}
+/* Individual translate leaves the hover transform and board rotation independent. */
+@keyframes section-lift{0%,9%,32%,100%{translate:0 0 9px}17%,24%{translate:0 -10px 48px}}
+.module{translate:0 0 9px;animation:section-lift 12s ease-in-out infinite;animation-delay:calc(var(--lift-order)*1.65s);will-change:translate}
+.module:nth-child(1){--lift-order:0}.module:nth-child(2){--lift-order:1}.module:nth-child(3){--lift-order:2}.module:nth-child(4){--lift-order:3}.module:nth-child(5){--lift-order:4}.module:nth-child(6){--lift-order:5}
+.module:hover,.module:focus-visible{transform:translateZ(48px) translateY(-10px);box-shadow:0 12px 0 #183c25,0 13px 0 #bedf86,0 30px 45px #0005}
+.about:hover,.about:focus-visible{box-shadow:0 12px 0 #638546,0 13px 0 #d5efa6,0 30px 45px #0004}
+.stage:has(.module:hover) .module,.stage:has(.module:focus-visible) .module,.stage.dragging .module,.stage.is-reading .module,.stage.motion-paused .module{animation-play-state:paused}
+.flat .module{animation:none;translate:0 0 0}
+@media(min-width:1600px){.stage{height:850px}.blueprint{width:min(1200px,78vw)}}
+@media(max-width:1200px){.stage{height:700px;overflow:visible}.blueprint{width:82vw;--view-scale:1}.flat .blueprint{--view-scale:1}.module{padding:18px;min-height:150px}.module-label{font-size:12px}.about strong{font-size:40px}.module-foot{font-size:8px}.intro .role{display:none}}
+@media(max-width:900px){#workspace{padding:0 4%}.intro{display:flex;padding:25px 0 0}.intro>div{display:block}.intro>.instruction{display:block;font-size:8px}.stage{height:650px;margin:0;overflow:visible}.blueprint{width:84vw;--base-tilt:16deg;--base-roll:-8deg}.modules{gap:12px}.module{padding:15px}.module-label{font-size:11px;letter-spacing:.4px}.module-foot{font-size:7px}.about strong{font-size:34px}.contact strong{font-size:24px}.view-tools{margin:10px 0 25px}.board-top{font-size:8px}.board-bottom{font-size:7px}}
+@media(max-width:600px){#workspace{padding:0 20px}.intro{display:block;padding:23px 0 0}h1{font-size:33px;letter-spacing:-1px}.intro>.instruction{margin-top:12px;text-align:left;font-size:8px}.intro>.instruction>i{display:none}.stage{height:750px;perspective:1300px;margin:0;overflow:visible}.blueprint{width:100%;padding:14px;--base-tilt:10deg;--base-roll:-5deg;--view-scale:.95;border-radius:23px}.flat .blueprint{--view-scale:.95}.modules{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.module{padding:13px;min-height:143px;border-radius:12px}.module-label{font-size:11px;letter-spacing:0;line-height:1.6;margin-bottom:16px}.module-foot{font-size:7px;letter-spacing:0}.about strong{font-size:31px}.about{grid-row:span 2}.lines{margin-top:28px}.mini-grid{gap:4px}.mini-grid i{font-size:9px;padding:7px 3px}.papers{gap:8px}.papers i{width:24px;height:35px}.contact{gap:8px;min-height:100px;flex-wrap:wrap}.contact strong{font-size:23px}.contact .module-foot{font-size:8px}.board-top{font-size:6px;gap:6px;padding-bottom:16px}.board-top span:first-child{display:none}.board-bottom{font-size:6px;padding-top:18px;gap:8px}.axis{display:none}.view-tools{gap:8px;margin:10px 0 24px}.view-tools>.eyebrow{display:none}.view-tools button{padding:10px;font-size:8px}.stage:before{width:95%;height:77%}.stage:after{width:95%;height:85%}}
+@media(prefers-reduced-motion:reduce){.module{animation:none;translate:0 0 9px;will-change:auto}}
+/* Only the physical viewport limits the canvas; there is no inner clipping panel. */
+html{overflow-x:clip}
+@media(max-width:600px){.blueprint{--view-scale:.9}.flat .blueprint{--view-scale:.9}}

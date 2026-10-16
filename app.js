@@ -82,6 +82,13 @@ $('#zoom').oninput=e=>$('#blueprint').style.setProperty('--zoom',e.target.value)
  $('#flat').addEventListener('click',neutral);
  reduced.addEventListener('change',neutral);
  // Opening a sheet leaves the board still behind the modal.
- new MutationObserver(()=>{if(dialog.open)neutral();}).observe(dialog,{attributes:true,attributeFilter:['open']});
+ new MutationObserver(()=>{stage.classList.toggle('is-reading',dialog.open);if(dialog.open)neutral();}).observe(dialog,{attributes:true,attributeFilter:['open']});
  window.addEventListener('blur',()=>{if(drag)finish({pointerId:drag.id});neutral();});
 })();
+
+// Visitors can stop the staggered section lift independently of pointer controls.
+$('#motion').addEventListener('click',()=>{
+ const paused=$('.stage').classList.toggle('motion-paused');
+ $('#motion').setAttribute('aria-pressed',String(paused));
+ $('#motion').textContent=paused?'RESUME LIFT':'PAUSE LIFT';
+});
