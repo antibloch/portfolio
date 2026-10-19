@@ -8,6 +8,7 @@ const CAPABILITIES = [
     "color": "#c4f279",
     "capabilities": [
       "I have designed tool-using ReAct agents, stateful LangGraph workflows, and planner–validator–executor pipelines.",
+      "I have built a minimal 3D LangGraph execution viewer as a Langgraphics fork, tracing actual tool calls and prompt-dependent paths for clear technical demonstrations.",
       "I have integrated natural-language querying with streaming APIs, SQL analysis, survey statistics, PLSR, and word-cloud tools.",
       "I have built multi-agent research and prediction workflows, short-term retrieval memory, and reusable agentic skills."
     ],
@@ -21,6 +22,10 @@ const CAPABILITIES = [
       "OpenAI API"
     ],
     "links": [
+      [
+        "Langgraphics 3D / Demo",
+        "https://github.com/antibloch/langgraphics#demo-same-agent-different-prompts"
+      ],
       [
         "Donation workflow",
         "https://github.com/antibloch/donor_agent"

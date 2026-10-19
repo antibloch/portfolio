@@ -18,7 +18,7 @@ Open http://127.0.0.1:8765. Alternatively, open index.html directly (clipboard c
 - The frame has a full-width canvas, free of introduction-panel overlap and inner clipping.
 - Escape closes the sheet; left/right arrows move between sheets.
 - Use Tab and Enter for keyboard navigation. Native dialogs contain focus and return it to the trigger.
-- Project search matches titles, descriptions, and tools; category buttons filter all 101 projects.
+- Project search matches titles, descriptions, and tools; category buttons filter all 102 projects.
 - Expand technical notes to view the original project overview and supporting images/videos.
 - Move the mouse across the drawing to tilt the entire frame in perspective.
 - Drag the drawing with the left mouse button to move it. A drag never opens a sheet.
@@ -27,7 +27,7 @@ Open http://127.0.0.1:8765. Alternatively, open index.html directly (clipboard c
 
 ## Content
 
-Content retained from the original portfolio: 101 projects, 9 publications, 7 career entries, portrait, skills, and contact details. Original project descriptions and repository links are retained, including projects that may be implementations of other researchers’ work. No new credentials, outcomes, or employment claims were added. Publication citation counts were omitted because the source is a historical snapshot.
+Content includes 102 projects, 9 publications, 7 career entries, portrait, skills, and contact details. Original project descriptions and repository links are retained, including projects that may be implementations of other researchers’ work. No new credentials, outcomes, or employment claims were added. Publication citation counts were omitted because the source is a historical snapshot.
 
 Edit `data.js` for projects, publications, and career entries. Edit `app.js` for biography, skills, and contact sheet content; `style.css` controls the design. Assets are stored locally in this repository. Some original source image references may be unavailable; failed project previews hide gracefully.
 
@@ -53,3 +53,10 @@ Project categories are floating 3D cards that open searchable category dialogs. 
 Projects opens with category cards only. Project lists and search are contained in category popups; each domain card opens its own project list.
 
 The All projects card has been removed. Seven category cards provide access to the archive, with stronger staggered floating, lateral drift, 3D tilt, and independent artwork motion. Hover/focus, pause controls, and reduced-motion support remain available.
+
+
+## Langgraphics 3D
+
+The project archive includes [Langgraphics 3D](https://github.com/antibloch/langgraphics), a modified open-source fork of [proactive-agent/langgraphics](https://github.com/proactive-agent/langgraphics). Its entry describes actual execution tracing, named tool calls, and prompt-dependent ReAct tool selection. The Agentic AI capability links to the project demo.
+
+`assets/images/projects/langgraphics/demo-preview.jpg` is a frame extracted at three seconds from the news-versus-Lahore-weather comparison. The accompanying local MP4 is available in the project detail popup. Both assets are derived from the actual recorded demo.
