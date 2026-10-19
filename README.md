@@ -42,7 +42,7 @@ The Capabilities sheet includes ten revolving domain worlds that open capability
 
 The field uses CSS lighting, perspective, orbital rings, and floating animation, without external assets or WebGL dependencies. Domain buttons support keyboard activation, expose their selected state, and remain usable on narrow screens. Pause orbit motion stops the floating animation; system reduced-motion preferences disable it automatically. The existing project archive and portfolio sheets are preserved.
 
-Planets follow elliptical orbits around the center with upright labels and depth scaling. Hover or keyboard focus pauses the orbit for selection; opening a capability popup also pauses it. Close with Escape, the close button, or the backdrop. The motion toggle and reduced-motion preference remain supported.
+Planets follow elliptical orbits around the center with upright labels and depth scaling. The planets keep orbiting during mouse hover and keyboard focus; opening a capability popup pauses the motion for reading. Close with Escape, the close button, or the backdrop. The motion toggle and reduced-motion preference remain supported.
 
 The original staggered floating lift is retained on each planet alongside orbital travel. Subtle planet rotation adds dimensional motion; pause and reduced-motion controls cover both effects.
 

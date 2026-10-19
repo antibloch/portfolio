@@ -110,7 +110,7 @@ $('#cosmos-motion').addEventListener('click',()=>{const paused=cosmos.classList.
  new ResizeObserver(()=>{width=cosmos.clientWidth;height=cosmos.clientHeight;draw();}).observe(cosmos);
  new IntersectionObserver(entries=>{visible=entries[0].isIntersecting;}).observe(cosmos);
  function draw(){buttons.forEach((b,i)=>{const a=angle+i*Math.PI*2/buttons.length-Math.PI/2;const depth=(Math.sin(a)+1)/2;b.style.left=`${width/2+Math.cos(a)*width*.39}px`;b.style.top=`${height*.47+Math.sin(a)*height*.37}px`;b.style.transform=`translate(-50%,-50%) scale(${.83+depth*.17})`;b.style.zIndex=String(2+Math.round(depth*10));});}
- function tick(now){const dt=last?Math.min(now-last,60):0;last=now;if(visible&&!document.hidden&&!reduced.matches&&!domainPopup.open&&!cosmos.classList.contains('motion-paused')&&!cosmos.matches(':hover,:focus-within')){angle+=dt*Math.PI*2/110000;draw();}requestAnimationFrame(tick);}
+ function tick(now){const dt=last?Math.min(now-last,60):0;last=now;if(visible&&!document.hidden&&!reduced.matches&&!domainPopup.open&&!cosmos.classList.contains('motion-paused')){angle+=dt*Math.PI*2/110000;draw();}requestAnimationFrame(tick);}
  draw();requestAnimationFrame(tick);
 })();
 

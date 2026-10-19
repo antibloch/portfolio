@@ -67,7 +67,7 @@ header button.contact-link{border:0;border-bottom:1px solid var(--accent);border
 button.domain-world{animation:world-float 7s ease-in-out infinite;animation-delay:var(--delay);transform-style:preserve-3d}
 .domain-world .planet{animation:planet-drift 9s ease-in-out infinite;animation-delay:var(--delay);transform-style:preserve-3d}
 @keyframes planet-drift{0%,100%{rotate:-5deg}50%{rotate:7deg}}
-.cosmos.motion-paused .domain-world,.cosmos.motion-paused .planet,.cosmos.popup-reading .domain-world,.cosmos.popup-reading .planet,.domain-world:hover,.domain-world:focus-visible{animation-play-state:paused}
+.cosmos.motion-paused .domain-world,.cosmos.motion-paused .planet,.cosmos.popup-reading .domain-world,.cosmos.popup-reading .planet{animation-play-state:paused}
 @media(prefers-reduced-motion:reduce){button.domain-world,.domain-world .planet{animation:none}}
 
 .cosmic-core span{font-size:36px}@media(max-width:600px){.cosmic-core span{font-size:25px}}
