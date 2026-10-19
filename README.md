@@ -34,3 +34,22 @@ Edit `data.js` for projects, publications, and career entries. Edit `app.js` for
 This repository is ready for static hosting, including GitHub Pages. The `.nojekyll` file disables Jekyll processing; all runtime links are relative and support a `/portfolio/` project URL. No build step is required. Legacy helper scripts and data snapshots remain for reference; the live site loads only `app.js` and `data.js`. Deployment has not been performed.
 
 See REFERENCE_ANALYSIS.md for the REA investigation and implementation choices.
+
+
+## Capability universe
+
+The Capabilities sheet includes ten revolving domain worlds that open capability popups, supporting tools, and project evidence. The full capability directory is also available through the Capabilities sheet. `capabilities.js` is the shared content source for both views; it is based on the saved career profile and repository evidence. Public descriptions preserve the selective professional-project presentation.
+
+The field uses CSS lighting, perspective, orbital rings, and floating animation, without external assets or WebGL dependencies. Domain buttons support keyboard activation, expose their selected state, and remain usable on narrow screens. Pause orbit motion stops the floating animation; system reduced-motion preferences disable it automatically. The existing project archive and portfolio sheets are preserved.
+
+Planets follow elliptical orbits around the center with upright labels and depth scaling. Hover or keyboard focus pauses the orbit for selection; opening a capability popup also pauses it. Close with Escape, the close button, or the backdrop. The motion toggle and reduced-motion preference remain supported.
+
+The original staggered floating lift is retained on each planet alongside orbital travel. Subtle planet rotation adds dimensional motion; pause and reduced-motion controls cover both effects.
+
+Open Capabilities from the main portfolio board or bottom navigation to explore the planetary field. The main page retains its original section board; the planetary view and expandable text directory are contained within Capabilities.
+
+Project categories are floating 3D cards that open searchable category dialogs. Each project title opens a separate detail popup with its full original description, tools, repository link, technical overview, and available media. Escape or Close returns through the dialog stack. A motion toggle and reduced-motion support cover category cards.
+
+Projects opens with category cards only. Project lists and search are contained in category popups; each domain card opens its own project list.
+
+The All projects card has been removed. Seven category cards provide access to the archive, with stronger staggered floating, lateral drift, 3D tilt, and independent artwork motion. Hover/focus, pause controls, and reduced-motion support remain available.
